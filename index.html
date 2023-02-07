@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berat Badan Ideal</title>
+</head>
+<body>
+    <h2>Berat Badan Ideal</h2>
+
+    <h3>menghitung Berat Badan BMI</h3>
+
+    <label> Tinggi Badan(cm)</label>
+    <input type="number" name="ipt_t" id="ipt_t" class="form-control" required="" placeholder="Masukkan Tinggi Badan"> <br> <br>
+    <label> Berat Badan(Kg)</label>
+    <input type="number" name="ipt_b" id="ipt_b" class="form-control" required="" placeholder="Masukkan Berat Badan"><br> <br>
+    <button onclick="hitung()">Hitung</button>
+
+    <h4 id="bmi"></h4>
+    <h5 id="keterangan"></h5>
+
+    <p>By:Silfina Fajrina</p>
+    <script type="text/javascript">
+        var tinggi, berat, keterangan, bmi;
+        function  hitung(){
+            tinggi = parseFloat(document.getElementById("ipt_t").value);
+            tinggi /= 100;
+            berat = parseFloat(document.getElementById("ipt_b").value);
+            bmi = berat / (tinggi * tinggi);
+            if(bmi > 27) {
+                keterangan = "Gemuk,Kelebihan berat badan Tingkat Berat";
+            }else if ((bmi >= 25,1) & (bmi <= 27)) {
+                keterangan = "Gemuk,kelebihan Berat Badan Tingkat Rendah";
+            }else if ((bmi >= 18,5) & (bmi <= 25)) {
+                keterangan = "Normal";
+            }else if ((bmi >= 17) & (bmi <= 18,4)) {
+                keterangan ="kurus,Kekurangan Berat Tingkat Rendah";
+            }else {
+                keterangan = "Kurus,Kekurangan Badan Tingkat Berat";
+        }
+            document.getElementById('bmi').innerHTML = "Hasil perhitungan BMI :" + bmi.toFixed(1);
+            document.getElementById('keterangan').innerHTML = "keterangan : " + keterangan;
+        }
+    </script>
+</body>
+</html>

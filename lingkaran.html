@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lingkaran</title>
+</head>
+<body>
+    <h1>Menghitung Luas Lingkaran</h1>
+    <br>
+    <input type="number" id= "ruas" placeholder="Masukkan ruas"><br><br>
+    <button onclick="li()">Hitung</button>
+    <hr>
+    <h3 id="hasil"></h3>
+    <script>
+function li() {
+let ruas = document.getElementById("ruas").value;
+let luas = 3.14 * ruas * ruas;
+let hasil = document.getElementById("hasil");
+hasil.innerHTML="Hasil Perhitungan luas lingkaran = " + luas;
+}
+
+    </script>
+</body>
+</html>

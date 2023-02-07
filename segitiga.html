@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>segitiga</title>
+</head>
+<body>
+
+
+    <label> Tinggi(cm)</label>
+    <input type="number" name="alas" id="alas" class="form-control" required="" placeholder="Masukkan alas"> <br> <br>
+    <label> alas(cm)</label>
+    <input type="number" name="tinggi" id="tinggi" class="form-control" required="" placeholder="Masukkan tinggi"><br> <br>
+    <button onclick="hitung()">Hitung</button>
+    <input type="number" name="luas" id="luas" class="form-control" required=""><br> <br> <hr>
+   
+
+    <p>By:Silfina Fajrina</p>
+
+    <script>
+        function hitung(){
+            alas=document.getElementById("alas").value;
+            tinggi=document.getElementById("tinggi").value;
+            luas=(alas*tinggi)*0.5;
+            document.getElementById("luas").value=luas;
+        }
+    </script>
+</body>
+</html>
